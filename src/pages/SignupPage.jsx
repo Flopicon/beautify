@@ -63,7 +63,7 @@ export default function SignupPage() {
       <div className="auth-page">
         <div className="container">
           <div className="auth-card text-center">
-            <div className="success-icon">✨</div>
+            <div className="success-icon"><i className="fa-solid fa-star"></i></div>
             <h2 className="text-dark fw-bold">Welcome, {formData.name}!</h2>
             <p className="text-muted mb-4">Your account has been created successfully.</p>
             <p className="text-muted small">Redirecting to your profile...</p>

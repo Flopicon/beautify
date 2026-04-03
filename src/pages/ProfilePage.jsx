@@ -15,7 +15,7 @@ export default function ProfilePage() {
           <div className="col-lg-4">
             <div className="profile-card">
               <div className="profile-header">
-                <div className="profile-avatar">👤</div>
+                <div className="profile-avatar"><i className="fa-solid fa-user"></i></div>
                 <h3 className="fw-bold mt-3">{user.name}</h3>
               </div>
 
@@ -51,7 +51,7 @@ export default function ProfilePage() {
           <div className="col-lg-8">
             <div className="orders-section">
               <h4 className="text-success fw-bold mb-4">
-                📋 Order History {orderHistory.length > 0 && `(${orderHistory.length})`}
+                <i className="fa-solid fa-clipboard"></i> Order History {orderHistory.length > 0 && `(${orderHistory.length})`}
               </h4>
 
               {orderHistory.length > 0 ? (
@@ -92,7 +92,7 @@ export default function ProfilePage() {
                 </div>
               ) : (
                 <div className="empty-orders text-center py-5">
-                  <div className="empty-icon">📭</div>
+                  <div className="empty-icon"><i className="fa-solid fa-inbox"></i></div>
                   <h5 className="text-muted">No Orders Yet</h5>
                   <p className="text-muted small mb-4">
                     Start shopping and your orders will appear here

@@ -58,19 +58,6 @@ export default function Navbar() {
             {isAuthenticated ? (
               <>
                 <li className="nav-item">
-                  <Link className="nav-link position-relative" to="/profile">
-                    <i className="fa-regular fa-circle-user"></i> {user.name}
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link position-relative" to="/messages">
-                    <i className="fa-solid fa-inbox"></i>
-                    <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style={{display: 'none'}}>
-                      0
-                    </span>
-                  </Link>
-                </li>
-                <li className="nav-item">
                   <button
                     className="nav-link btn btn-link text-danger"
                     onClick={logout}
