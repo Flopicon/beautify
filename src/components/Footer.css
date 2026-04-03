@@ -1,0 +1,38 @@
+.footer-link {
+  transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #81AF92 !important;
+  transform: translateX(5px);
+  display: inline-block;
+  font-weight: 500;
+}
+
+.social-icons a {
+  display: inline-block;
+  font-size: 1.5rem;
+  margin-right: 15px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: #333;
+}
+
+.social-icons a i {
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2) translateY(-3px);
+  color: #81AF92;
+}
+
+@media (max-width: 768px) {
+  footer .row {
+    text-align: center;
+  }
+
+  .footer-link:hover {
+    transform: none;
+  }
+}
