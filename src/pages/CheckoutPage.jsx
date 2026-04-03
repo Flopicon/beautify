@@ -23,8 +23,9 @@ export default function CheckoutPage() {
   const [isProcessing, setIsProcessing] = useState(false)
   const [orderComplete, setOrderComplete] = useState(false)
   const [orderId, setOrderId] = useState('')
+  const [orderTotal, setOrderTotal] = useState(0)
 
-  const subtotal = getCartTotal()
+  const subtotal = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0)
   const tax = calculateTax(subtotal)
   const total = calculateTotal(subtotal)
 
@@ -70,6 +71,7 @@ export default function CheckoutPage() {
         city: formData.city,
       })
       setOrderId(newOrderId)
+      setOrderTotal(total)
       setOrderComplete(true)
       clearCart()
     }, 2000)
@@ -91,7 +93,7 @@ export default function CheckoutPage() {
                 <strong>Order Number:</strong> <span className="text-success">{orderId}</span>
               </p>
               <p className="mb-2">
-                <strong>Order Total:</strong> <span className="text-success">{formatPrice(total)}</span>
+                <strong>Order Total:</strong> <span className="text-success">{formatPrice(orderTotal)}</span>
               </p>
               <p className="mb-0">
                 <strong>Shipping To:</strong> {formData.city}
